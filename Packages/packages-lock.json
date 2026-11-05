@@ -28,6 +28,7 @@
     "com.unity.cinemachine": {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "version": "3.1.7",
       "depth": 0,
       "source": "registry",
@@ -39,6 +40,8 @@
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
       "version": "file:com.unity.cinemachine",
       "depth": 0,
       "source": "embedded",
@@ -47,6 +50,9 @@
         "com.unity.modules.imgui": "1.0.0"
       }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
