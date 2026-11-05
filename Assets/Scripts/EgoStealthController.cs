@@ -36,12 +36,12 @@ public class EgoStealthController : MonoBehaviour
     {
         if (movimientoPlayer == null) return;
 
-        // Detectar si el jugador está quieto
+        // 1. Detectar si el jugador está quieto
         float distanciaMovida = Vector3.Distance(transform.position, ultimaPosicion);
         estaQuieto = (distanciaMovida < 0.001f);
         ultimaPosicion = transform.position;
 
-        // Aplicar velocidad y ruido
+        // 2. Aplicar velocidad y ruido
         if (enSigilo)
         {
             movimientoPlayer.speed = velocidadSigilo;
@@ -58,12 +58,13 @@ public class EgoStealthController : MonoBehaviour
             nivelRuido = 1;
         }
 
+        // Ruido alto al correr o presionar espacio sin sigilo
         if (Keyboard.current != null && Keyboard.current.spaceKey.isPressed && !enSigilo)
         {
             nivelRuido = 3; 
         }
 
-        // Temporizador del disfraz
+        // 3. Temporizador del disfraz
         if (estaDisfrazado)
         {
             timerDisfraz -= Time.deltaTime;
@@ -76,15 +77,17 @@ public class EgoStealthController : MonoBehaviour
         }
     }
 
+    // Método conectado al Input System (Acción "Habilidad" / Tecla E)
     public void OnHabilidad(InputValue value)
     {
-        // Se activa únicamente al presionar la tecla (flanco de subida) y si no está activo ya
         if (value.isPressed && !estaDisfrazado)
         {
+            Debug.Log("¡Habilidad activada! Te has disfrazado temporalmente.");
             ActivarDisfraz();
         }
     }
 
+    // Método conectado al Input System para el Sigilo
     public void OnStealth(InputValue value)
     {
         enSigilo = value.isPressed;
@@ -92,6 +95,7 @@ public class EgoStealthController : MonoBehaviour
 
     void LateUpdate()
     {
+        // Respaldo de lectura para Shift Izquierdo
         if (Keyboard.current != null)
         {
             enSigilo = Keyboard.current.leftShiftKey.isPressed;
