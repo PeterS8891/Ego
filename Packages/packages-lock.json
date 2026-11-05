@@ -26,26 +26,6 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.cinemachine": {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
-      "version": "3.1.7",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.splines": "2.0.0",
-        "com.unity.modules.imgui": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
       "version": "file:com.unity.cinemachine",
       "depth": 0,
       "source": "embedded",
@@ -53,15 +33,6 @@
         "com.unity.splines": "2.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     },
     "com.unity.collab-proxy": {
       "version": "2.11.4",
